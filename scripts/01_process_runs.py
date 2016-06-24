@@ -65,6 +65,8 @@ for run in xrange( args.start, args.stop+1 ):
     os.system("sed -i -e 's/448539/%s/g' sacla_2016_6.m" % RUN)
     #os.remove('sacla_2016_6.m-e')
 
+    # make sure output is printed before we execute C-code
+    sys.stdout.flush()
     os.system('./data_process.out %s' % RUN)
     
 
