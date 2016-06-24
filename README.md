@@ -22,7 +22,6 @@ DataConvert
 
 - Run `DataConvert4` to extract the data to HDF5 format:
 
-#  `DataConvert4 -dir ~/data/test -o 259782.h5 -each -mode 30 -r 259782 -starttag 447317100 -endtag 447352620`
   `DataConvert4 -f test0001.conf -l tag_number0001.list -dir ./ -o test0001.h5`
 
 - Run `DataCompress3.py` using Python 2.7 to produce averages for each scan position:
