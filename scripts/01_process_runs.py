@@ -10,9 +10,15 @@ parser = ArgumentParser(description="Process run data from the detector server t
 parser.add_argument("-start", "--start-run",  type=int, dest="start", required=True, 
                 help="first run to process")
 parser.add_argument("-stop", "--stop-run", type=int, dest="stop", default=0,
+<<<<<<< HEAD
                 help="last run to process (default: only process first run)")
 parser.add_argument("-exp", "--exp-year",  type=int, dest="exp", default=2016, 
                 help="experimental year to compress (default: 2016)")
+=======
+                help="last run to process (default: only process 1 run)")
+parser.add_argument("-exp", "--exp-year",  type=int, dest="exp", default=2016, 
+                help="experimental year to compress")
+>>>>>>> 43d607f1967774866172ae9d0ada5ef21e658d2b
 parser.add_argument("-multi", "--multi-run", action="store_true", dest="multi", required=False, default=False,
                 help="process multi-file run converted using DataConvert4")
 parser.add_argument("-force", "--force-run", action="store_true", dest="force", required=False, default=False,
@@ -20,7 +26,11 @@ parser.add_argument("-force", "--force-run", action="store_true", dest="force", 
 parser.add_argument("-tag", "--output-tag", type=str, dest="tag", default="run",
                 help="tag for output folder (default: run)")
 parser.add_argument("-o", "--output-flag", type=str, dest="outputFlag", 
+<<<<<<< HEAD
                 help="where to process runs. 'W' refers to /work/perakis/ and 'UD' refers to '/UserData/fperakis' (default: UD)",
+=======
+                help="where to process runs. 'W' refers to /work/perakis/ and 'UD' refers to '/UserData/fperakis'",
+>>>>>>> 43d607f1967774866172ae9d0ada5ef21e658d2b
                 choices=['W','UD'], default='UD')
 
 args = parser.parse_args()
@@ -32,8 +42,12 @@ if args.outputFlag == 'W':
     sys.exit(1)
 elif args.outputFlag == 'UD':
     basedir = '/UserData/fperakis/'
+<<<<<<< HEAD
     #src_dir = basedir + 'code/'
     src_dir = '/home/fperakis/2016_06/git/SACLA2016A8015/code/'
+=======
+    src_dir = basedir + 'code/'
+>>>>>>> 43d607f1967774866172ae9d0ada5ef21e658d2b
     outdir = basedir + '%d_6/' % args.exp
 
 if (args.stop < args.start):

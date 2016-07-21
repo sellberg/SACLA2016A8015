@@ -1,17 +1,17 @@
-#!/home/doniach/dermen/epd731/bin/python
+#!/home/software/SACLA_tool/bin/python2.7
 import numpy as np
 import h5py 
 import matplotlib
 import matplotlib.pyplot as plt
 import argparse
 import time
-import pandas as pd
+#import pandas as pd
 import sys
   
 # -- default parameters
-run = 448539
-file_folder = '/UserData/fperakis/2016_6/01_test/' # h5 files folder
-src_folder  = '/home/fperakis/2016_06/python_scripts/src' # src files folder
+run = 448556#448539
+file_folder = '/UserData/fperakis/2016_6/run%d/'%(run) # h5 files folder
+src_folder  = '/home/fperakis/2016_06/python_scripts/src/' # src files folder
 
 # -- files and folders
 file_name = '%d.h5'%(run)
